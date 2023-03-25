@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css">
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <title>IP Address Tracker</title>
+  </head>
+  <body>
+    <div class="alert"></div>
+    <div class="app">
+      <div class="app__primary">
+        <header>
+          <h1 class="header__title">IP Address Tracker</h1>
+        </header>
+        <form id="form-ip" class="form">
+          <input
+            class="form__input"
+            type="text"
+            name="ip"
+            placeholder=" Search for any IP address or domain"
+          />
+          <button class="form__btn">></button>
+        </form>
+        <main class="content">
+        </main>
+      </div>
+      <div class="app__secondary"><div id="map"></div></div>
+    </div>
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script type="module" src="./main.js"></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+  </body>
+</html>
