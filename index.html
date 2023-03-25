@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAAAXNSR0IArs4c6QAABFpJREFUaEPtWEFy20YQ7CXhs5kXRHuNoQr9AlMvMPmCyMeUwLL0AjMvsFykykfLL5D8glAvCFyCcl37BSHPJLGugUAEHCywuyB9cJVxI7HY6Z3p6ZlZgR/wET8gZvwEvY3ab1eq3xV4utFY/nsm40NHc29P99+q3uYJXqTAUABDAD0DyIUGbjvAbXeFu/hCLvY5yF6gw6l6DYFJDdA6XAtoTJKxfNcWeCvQFH6hcSOAo7aGNfBFC4za0Mcb9PGVOtUab2u8u4RGjA5ipFiggx5S9CHQB/DURBshcHF/Jq99Du8FOgf8oWJA404Al/djeVtn/Hiqhho4h8ALvkYIvPIB7gyaKNHR+IcZJM8Ok7Gcu3oqnKoBBOhwO55PBZ67UsUJNCnE+gkUo8TnYIVBGyXI96OD/l467CJYQbrs5wQ6nKoJBN6UDHwNVuhzA/336mi9xkt0MIBGDwILpJgHAT7Ff8ov5WjkwEnDfy3+1/grGUtSo8bHCjoDssm8XDymUIZX6hIar+usZZyP5EX5vYlyQReSH7CSA7ZTcS8L4ON9JE+33+Ue+xvIFML2xMEKJ+UIHc/UtQb+8PG21dPhTFHyFYC4JypGLbA1cP0QyVfFoauRjJNIPm/aphG0gRqfk0gWB8iVgLxcchQ+CY1LUhR6rwXOBfByB4TGSVlxwpkibhdJaaNII+gKKJYoFS8LvEvO5Dn3Euc7p1gl0dmhvDjNiwkvAuFMkSIU2R+s8ItJsnLe/7c1TiX8IZJy+9tmxwu0zQPhTOkSL+6SsRzUcZFTIIlkEWVbRL8baO69CkVmitrRogqWQWclXuDGVUEaOf1spiiJqDl6fBinw6ma7/QSNVw0eHInKhVZtfQieyUiP5Sp3TS1sRq4eIjk5dYXNhp60YMnEIAdDc3fUzLytpMiMIcGcZzzfBmscFRO2EotqEnoLXiX4tKooSatbqwvjEK2WmDayw6a9RQ8tLRpnkjUyJsa/a3dpdA45T13JW9qtL4M3gra4AljC0nrNhtM9ONwWwa/FDTQdjGp6fR2Wl5bNSTwVtC0yKASjS1k1r2l6KUdLJoae0MCNmq9M6dz0DRtlHsM54a9jt/GwcJSvr1AG70tcJucyVFj0jW8DK/UDY1qrhXVi9PbxaaGXWiMmobZOsyVCgjg4DNiUQSq08kiFThxHUhpn/zwRLX/b6IcFKOVp+mjmoG0Mo1YeMynHO8B2Uk9yiByT9EkXZa1eRLJExu/eeUDsEwFBj6RcpY8DsZ0acPHKP7Ns5n6IIBitsyMe17SeKsHB2G4VkAdcBNg3jHaotSa0xWP80n6ccE8WGFEDVGeA9Qn7zRNfNzyAdyaHmUjNdN4HHQxWm+yxn7namFfwAcBTZu4XiMcAvDBQGcV03LDBE8tbqKMt+Q1bVZ3FdxWJepsHRR0qeLRVS5dLXxNBYa+OmxLzIODLipngH6wRuxydWsDyd9/F9C+IHzX/wTt67G2678BhL9vTAycuFsAAAAASUVORK5CYII="
+    />
+    
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <title>IP Address Tracker</title>
+    <script type="module" crossorigin src="/assets/index-740e5469.js"></script>
+    <link rel="stylesheet" href="/assets/index-8475d43e.css">
+  </head>
+  <body>
+    <div class="alert"></div>
+    <div class="app">
+      <div class="app__primary">
+        <header>
+          <h1 class="header__title">IP Address Tracker</h1>
+        </header>
+        <form id="form-ip" class="form">
+          <input
+            class="form__input"
+            type="text"
+            name="ip"
+            placeholder=" Search for any IP address or domain"
+          />
+          <button class="form__btn">></button>
+        </form>
+        <main class="content">
+        </main>
+      </div>
+      <div class="app__secondary"><div id="map"></div></div>
+    </div>
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+  </body>
+</html>
