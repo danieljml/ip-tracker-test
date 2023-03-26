@@ -50,10 +50,16 @@ FORM.addEventListener('submit', e => {
   }
 });
 
-navigator.geolocation.getCurrentPosition(position => {
-  getUserCoords(position);
-  getUserIP();
-});
+navigator.geolocation.getCurrentPosition(
+  position => {
+    getUserCoords(position);
+    getUserIP();
+  },
+  () => {
+    getUserCoords({ coords: { latitude: '8.1217', longitude: '-63.5398' } });
+    getLocationByIP();
+  }
+);
 
 function getUserCoords({ coords }) {
   let { latitude, longitude } = coords;
@@ -75,7 +81,7 @@ async function getUserIP() {
   }
 }
 
-async function getLocationByIP(clientIP) {
+async function getLocationByIP(clientIP = '190.198.135.148') {
   try {
     const res = await fetch(`https://o5g8n7-8080.csb.app/${clientIP}`);
     const data = await res.json();
@@ -89,7 +95,7 @@ async function getLocationByIP(clientIP) {
     const [ipTag, locationTag, timezoneTag, ispTag] = tagList;
     ipTag.textContent = ip;
     locationTag.textContent = city;
-    timezoneTag.textContent = timezone;
+    timezoneTag.textContent = timezone.replaceAll('_', ' ');
     ispTag.textContent = org;
 
     const [latitude, longitude] = coords.split(',').map(parseFloat);
